@@ -1,1 +1,4 @@
 # CanvasPractice
+
+- Wave
+- Circle
