@@ -1,0 +1,95 @@
+body {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+}
+
+.menu {
+    height: 85px;
+    width: 85px;
+    background-color: rgb(43, 247, 145);
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 43px;
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+.fa-smile-wink {
+    position: relative;
+    top: 17px;
+    left: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-items {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu-items > div {
+    background-color: none;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+    font-size: 43px;
+    text-align: center;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.far {
+    position: relative;
+    top: 17px;
+}
+
+a {
+    color: rgba(90, 81, 80, 0.205);
+}
+
+.item2 {
+    bottom: 80px;
+}
+.item3 {
+    bottom: 160px;
+}
+.item4 {
+    bottom: 240px;
+}
+.item5 {
+    bottom: 320px;
+}
+.menu-items > div:nth-child(1):hover {
+    background-color: rgb(252, 218, 27);
+}
+.menu-items > div:nth-child(2):hover {
+    background-color: rgb(250, 75, 104);
+}
+.menu-items > div:nth-child(3):hover {
+    background-color: rgb(255, 132, 31);
+}
+.menu-items > div:nth-child(4):hover {
+    background-color: rgb(71, 166, 255);
+}
+.menu-items > div:nth-child(5):hover {
+    background-color: rgb(83, 71, 255);
+}
+.menu-items > div:hover a{
+    color: white;
+}
+

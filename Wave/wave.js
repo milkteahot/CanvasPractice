@@ -1,4 +1,4 @@
-import { Point } from "./point.js";
+import { Point } from "./Wave/point.js/index.js";
 
 export class Wave {
   constructor() {}

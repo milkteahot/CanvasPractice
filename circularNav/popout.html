@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Circular Nav-popout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="popout.css" />
+  </head>
+  <body>
+    <div class="menu" onclick="expand(0)">
+      <i class="far fa-smile-wink"></i>
+    </div>
+    <div class="menu-items" onclick="expand(document.querySelector.bind(this))">
+      <div class="item1" id="item1">
+        <span>
+          <a href="">
+            <i class="far fa-grin"></i>
+          </a>
+        </span>
+      </div>
+      <div class="item2" id="item2">
+        <span>
+          <a href="">
+            <i class="far fa-grin-hearts"></i>
+          </a>
+        </span>
+      </div>
+      <div class="item3" id="item3">
+        <span>
+          <a href=""><i class="far fa-grin-tongue-squint"></i> </a>
+        </span>
+      </div>
+      <div class="item4" id="item4">
+        <span>
+          <a href="">
+            <i class="far fa-tired"></i>
+          </a>
+        </span>
+      </div>
+      <div class="item5" id="item5">
+        <span>
+          <a href="">
+            <i class="far fa-sad-cry"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+    <script>
+      var i = 0;
+      function expand(value) {
+        if (value == 0) {
+          document.getElementById("item1").style.transform =
+            "translateX(-150px)";
+          document.getElementById("item2").style.transform =
+            "translate(-100px,-100px)";
+          document.getElementById("item3").style.transform =
+            "translateY(-150px)";
+          document.getElementById("item4").style.transform =
+            "translate(100px,-100px)";
+          document.getElementById("item5").style.transform =
+            "translateX(150px)";
+        } else {
+            console.log(value);
+          document.getElementById("item1").style.transform = "translate(0)";
+          document.getElementById("item2").style.transform = "translate(0)";
+          document.getElementById("item3").style.transform = "translate(0)";
+          document.getElementById("item4").style.transform = "translate(0)";
+          document.getElementById("item5").style.transform = "translate(0)";
+        }
+      }
+    </script>
+  </body>
+</html>
