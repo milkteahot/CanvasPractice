@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="popout.css" />
   </head>
   <body>
-    <div class="menu" onclick="expand(0)">
+    <div id="emozi"></div>
+    <div class="menu" id="menu" >
       <i class="far fa-smile-wink"></i>
     </div>
-    <div class="menu-items" onclick="expand(document.querySelector.bind(this))">
+    <div class="menu-items" id="menu-items" onclick="expand()">
       <div class="item1" id="item1">
         <span>
           <a href="">
@@ -54,6 +55,30 @@
     </div>
     <script>
       var i = 0;
+      const $menu = document.getElementById('menu');
+      $menu.addEventListener('click', function(){
+        console.log('hey');
+        expand(0);
+      })
+
+      const $items = document.getElementById('menu-items');
+      const $item = $items.childNodes;
+      // console.log($item);
+      const $emozi = document.getElementById('emozi');
+      const $li = document.createElement('li');
+      $emozi.appendChild($li);
+
+      [...$item].forEach(v => {
+        // console.log(v);
+        v.addEventListener('mouseover', e =>{
+          // console.log(e.currentTarget);
+          const current = e.currentTarget;
+          current.setAttribute('style', 'transform:none; font-size:60px;');
+          // console.log(current.childNodes)
+          $li.appendChild(e.currentTarget);
+        })
+      })
+
       function expand(value) {
         if (value == 0) {
           document.getElementById("item1").style.transform =
